@@ -1,0 +1,30 @@
+#desktop {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--taskbar-height));
+  padding: 20px;
+  background-image: url(../assets/images/Fondo.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Íconos */
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.icon {
+  width: 80px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-text);
+}
+
+.icon span {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: var(--color-muted);
+}

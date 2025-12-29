@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-desktop);
+  color: var(--color-text);
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}

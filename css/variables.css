@@ -1,0 +1,20 @@
+:root {
+  --bg-desktop: #0f172a;
+  --bg-taskbar: #ff00008a;
+  --bg-window: #020617;
+
+  --color-primary: #38bdf8;
+  --color-text: #e5e7eb;
+  --color-muted: #94a3b8;
+
+  --taskbar-height: 48px;
+  --radius: 10px;
+  --transition: 0.2s ease;
+}
+
+/* 🌙 Modo oscuro (base lista) */
+.dark {
+  --bg-desktop: #020617;
+  --bg-taskbar: #000000;
+  --bg-window: #020617;
+}
