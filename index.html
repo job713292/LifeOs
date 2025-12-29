@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeOS</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/desktop.css" />
+  <link rel="stylesheet" href="css/windows.css" />
+  <link rel="stylesheet" href="css/apps.css" />
+</head>
+
+<body>
+  <!-- 🖥️ DESKTOP -->
+  <div id="desktop">
+
+    <!-- ICONOS DEL ESCRITORIO -->
+    <div class="desktop-icons">
+      <button class="icon" data-app="notes">
+        📝
+        <span>Notas</span>
+      </button>
+
+      <button class="icon" data-app="tasks">
+        ✅
+        <span>Tareas</span>
+      </button>
+
+      <button class="icon" data-app="clock">
+        ⏰
+        <span>Reloj</span>
+      </button>
+    </div>
+
+    <!-- CONTENEDOR DE VENTANAS -->
+    <div id="windows-container">
+      <!-- Las ventanas se inyectan con JS -->
+    </div>
+
+  </div>
+
+  <!-- 📌 BARRA DE TAREAS -->
+  <footer id="taskbar">
+    <div class="taskbar-left">
+      <button id="start-btn">☰</button>
+    </div>
+
+    <div class="taskbar-center" id="taskbar-apps">
+      <!-- Apps abiertas -->
+    </div>
+
+    <div class="taskbar-right">
+      <span id="clock">00:00</span>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="js/windows.js"></script>
+  <script src="js/storage.js"></script>
+
+  <script src="js/apps/notes.js"></script>
+  <script src="js/apps/tasks.js"></script>
+  <script src="js/apps/clock.js"></script>
+</body>
+</html>
