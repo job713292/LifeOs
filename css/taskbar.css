@@ -37,14 +37,14 @@
 }
 
 .uno{
-  border-radius: 0px 1px 6px 1px;
+  border-radius: 50px 1px 20px 1px;
 }
 .dos{
-  border-radius: 1px 0px 1px 6px;
+  border-radius: 1px 50px 1px 20px;
 }
 .tres{
-  border-radius: 1px 6px 1px 0px;
+  border-radius: 1px 20px 1px 50px;
 }
 .cuatro{
-  border-radius: 6px 1px 0px 1px;
+  border-radius: 20px 1px 50px 1px;
 }

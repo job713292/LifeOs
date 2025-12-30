@@ -33,3 +33,10 @@
   padding: 10px;
   height: calc(100% - 32px);
 }
+
+.windowse{
+  display: none;
+  height: 100px;
+  width: 100px;
+  background-color: aquamarine;
+}
