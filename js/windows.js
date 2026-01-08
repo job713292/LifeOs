@@ -1,14 +1,15 @@
-const btn = document.getElementById("notas-btn");
-const ventana = document.getElementById("notas");
+const btn = document.querySelectorAll(".icon");
+const ventana = document.getElementById("ventanas");
 const windowdd = document.getElementById("windows-container");
 const desktop = document.getElementById("desktop-icons");
 const cerrarVentana = document.getElementById("cerrarVentana")
 
-btn.onclick = function(){
+btn.forEach(icono => {
+  icono.addEventListener("click", () => {
     ventana.classList.remove("oculto");
     windowdd.style.zIndex = "3"; 
-    
-}
+  });
+});
 
 window.onclick = function(event) {
   if (event.target == windowdd) {
