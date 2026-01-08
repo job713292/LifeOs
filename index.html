@@ -24,12 +24,9 @@
   <div id="desktop">
 
     <!-- ICONOS DEL ESCRITORIO -->
-    <div class="desktop-icons">
-      <button id="btn" class="icon" data-app="notes">
+    <div id="desktop-icons" class="desktop-icons">
+      <button id="notas-btn" class="icon" data-app="notes">
         📝
-        <div id="ventana" class="windowse">
-
-        </div>
         <span>Notas</span>
       </button>
 
@@ -47,6 +44,12 @@
     <!-- CONTENEDOR DE VENTANAS -->
     <div id="windows-container">
       <!-- Las ventanas se inyectan con JS -->
+
+      <div id="notas" class="ventanas oculto">
+        <span>
+          <button id="cerrarVentana" class="cerrarVentana">X</button>
+        </span>
+      </div>
     </div>
 
   </div>
