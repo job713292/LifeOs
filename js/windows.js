@@ -1,36 +1,60 @@
 const botones = document.querySelectorAll(".icon");
 const ventana = document.getElementById("ventanas");
-const contenedorVentanas = document.getElementById("windows-container");
+const windowdd = document.getElementById("windows-container");
 const desktop = document.getElementById("desktop-icons");
-const cerrarVentana = document.getElementById("cerrarVentana");
+const cerrarVentana = document.getElementById("cerrarVentana")
 
 
-btn.forEach(icono => {
+//Abrir ventana 
+botones.forEach(icono => {
   icono.addEventListener("click", () => {
     abrirVentana();
   });
 });
 
-//Cerrar al hacer click fuera 
-
-window.addEventListener("click", (event) => {
-  if(event.target === contenedorVentanas){
-    cerrarVentanaFn();
+window.onclick = function(event) {
+  if (event.target == windowdd) {
+    ventana.classList.add("oculto");
+    windowdd.style.zIndex = "1";
   }
+};
+
+cerrarVentana.addEventListener("click", function(){
+  ventana.classList.add("oculto");
 });
-
-//Boton de cerrar ventana
-
-cerrarVentana.addEventListener("click", cerrarVentanaFn);
-
-//Funciones reutilizables 
 
 function abrirVentana(){
   ventana.classList.remove("oculto");
-  contenedorVentanas.style.zIndex = "10";
-  desktop.style.zIndex = "1";
+  windowdd.style.zIndex = "3"; 
 }
 
-function cerrarVentanaFn(){
-  ventana.classList.add("oculto");
+
+//prueba de mover ventanas 
+
+const titleBar = document.getElementById("titleBar");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+titleBar.addEventListener("mousedown", (e) =>{
+  isDragging = true;
+
+  const rect = ventana.getBoundingClientRect();
+
+  offsetX = e.clientX - rect.left;
+  offsetY = e.clientY - rect.top;
+  titleBar.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isDragging) return;
+
+  ventana.style.left = e.clientX - offsetX + "px";
+  ventana.style.top = e.clientY - offsetY + "px";
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  titleBar.style.cursor = "";
 });
